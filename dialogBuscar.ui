@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WMultipletSimulatorDialog</class>
+ <widget class="QDialog" name="WMultipletSimulatorDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>100</height>
+   </rect>
+  </property>
+	<property name="windowTitle">
+	<string>Abrir archivos </string>
+	</property>
+	<layout class="QGridLayout" name="gridLayout_2">
+	
+	<!-- primer row del dialog -->
+	<item row="0" column="0">  
+		<widget class="QGroupBox" name="groupBox_3">
+			<layout class="QGridLayout" name="gridLayout_6">
+				<item row="0" column="1">
+				<widget class="QLineEdit" name="fMfileLineEdit"/>
+				</item> 	
+				<item row="0" column="0">
+					<widget class="QLabel" name="lbleus">
+					<property name="text">
+						<string>Referencia:</string>
+					</property>
+					</widget>	
+				</item>
+			</layout>
+			</widget>   
+	</item> 
+	
+	<!-- segundo row del dialog -->
+	<item row="1" column="0">  	
+		<widget class="QGroupBox" name="groupBox">       
+			<layout class="QGridLayout" name="gridLayout">
+				<item row="0" column="0">
+					<widget class="QLabel" name="lbNucleus">
+						<property name="text">
+							<string>Carpeta personal:</string>
+						</property>
+					</widget>	
+				</item>
+				<item row="0" column="1">
+					<widget class="QLineEdit" name="fMolefileLineEdit"/>
+				</item> 
+				<item row="0" column="2">
+							<widget class="QToolButton" name="fMolfileToolButton">
+							<property name="text">
+								<string>...</string>
+							</property>
+							<property name="icon">
+								<iconset>
+								<normaloff>:images/open.png</normaloff>:images/open.png</iconset>
+							</property>
+							<property name="iconSize">
+								<size>
+								<width>24</width>
+								<height>24</height>
+								</size>
+							</property>
+							</widget>
+					</item>
+					<item row="1" column="0">
+							<widget class="QCheckBox" name="cbWarnings">
+							<property name="text">
+								<string>Guardar por defecto</string>
+							</property>
+							</widget>
+					</item>
+				</layout>
+			</widget>
+		
+		</item> 
+
+	<!-- segundo row del dialog -->
+	<item row="2" column="0">
+	<widget class="QDialogButtonBox" name="buttonBox">
+		<property name="orientation">
+		<enum>Qt::Horizontal</enum>
+		</property>
+		<property name="standardButtons">
+		<set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+		</property>
+	</widget>
+	</item>
+	</layout>
+  
+  
+ </widget>  <!--end of widget class="QDialog"  -->
+ 
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>WMultipletSimulatorDialog</receiver>
+   <slot>accept()</slot>
+ 
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>WMultipletSimulatorDialog</receiver>
+   <slot>reject()</slot>
+   
+  </connection>
+ </connections>
+</ui>
